@@ -9,7 +9,7 @@ SELECT *
 INTO #AverageVax
 FROM COVID19_Analysis..vaccinations
 
-/* THIS IS FOR THE END QUERY ONCE WE HAVE PERFORMED CALCULATIONS: 
+/* THIS IS A START OF THE BRAINSTORMING FOR THE END QUERY ONCE WE HAVE PERFORMED CALCULATIONS: 
 WHERE (Day(date) BETWEEN 30 AND 31) OR (Month(date) = 02 AND Day(Date) BETWEEN 28 AND 29) */
 
 SELECT continent, location, date, total_vaccinations AS world_vax, new_vaccinations AS new_vax, SUM(CAST(new_vaccinations AS BIGINT)) OVER (PARTITION BY location ORDER BY location, date) AS sum_vax--continent, total_vaccinations
@@ -124,7 +124,7 @@ ORDER BY location
 ---------------------------------------------------------------------------------------------------
 
 --STANDBY - 6.What is the max & min number of vaccinations per day per country
---Might be useful to utilize the rank operator? besides form max and min?? Research RANK and DENSE RANK
+--Might be useful to utilize the rank operator? besides from max and min?? Research RANK and DENSE RANK
 
 ---------------------------------------------------------------------------------------------------
 
