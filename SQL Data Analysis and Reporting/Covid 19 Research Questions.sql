@@ -1,4 +1,3 @@
---MIGHT WANT TO CREATE A STORED PROCEDURE, VIEW OR SOMETHING SIMILAR TO QUERY OFF OF IT FOR ALL THE QUESTIONS?
 
 ---------------------------------------------------------------------------------------------------
 
@@ -111,8 +110,6 @@ SELECT location,
 FROM #PercentileVax 
 WHERE new_vaccinations IS NOT NULL
 ORDER BY location
-
---**** CHECK THIS QUERY, COULD QUERY THE PARTITION BY OF PERCENTILE BY THE ROLLING COUNT OF VACCINATIONS PER LOCATION?
 
 ---------------------------------------------------------------------------------------------------
 
